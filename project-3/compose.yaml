@@ -1,0 +1,14 @@
+services:
+  website:
+    build: .
+    image: project-3:v1
+    container_name: project-3-compose
+    ports:
+      - "8081:80"
+    networks:
+      - project-3-network
+
+networks:
+  project-3-network:
+    name: project-3-compose-network
+    driver: bridge
